@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wd:Report_Data xmlns:wd="urn:com.workday.report/INT001a_Workday_to_CDS_CR">
+    <wd:Report_Entry>
+        <wd:All_Positions_Jobs>
+            <wd:Primary_Job>1</wd:Primary_Job>
+            <wd:FunctionCode>ARC3</wd:FunctionCode>
+            <wd:Business_Title>Architect</wd:Business_Title>
+            <wd:Position_Title>Architect 3 - 18</wd:Position_Title>
+            <wd:Assignment_StartDate_for_Position>03-03-2020</wd:Assignment_StartDate_for_Position>
+            <wd:Location_-_Address_Country>Netherlands</wd:Location_-_Address_Country>
+            <wd:Suporg wd:Descriptor="CIO/C&amp;IT HOF/Finance Reporting (Ahmed Shafik)">
+                <wd:ID wd:type="WID">c3a1c4cf6ea801bdfb819ab0fc2f3d37</wd:ID>
+                <wd:ID wd:type="Organization_Reference_ID">SUPERVISORY_ORGANIZATION-3-4545</wd:ID>
+            </wd:Suporg>
+            <wd:Supervisory_Org_Name>CIO/C&amp;IT HOF/Finance Reporting</wd:Supervisory_Org_Name>
+            <wd:Code>00350700236</wd:Code>
+            <wd:Manager>2644417</wd:Manager>
+            <wd:Manager_CorporateKey wd:Descriptor="IX87SH">
+                <wd:ID wd:type="WID">50feab79005a010078ad844d8e01d5dd</wd:ID>
+            </wd:Manager_CorporateKey>
+            <wd:HR_Partner>02530215</wd:HR_Partner>
+            <wd:Company>NN Personeel B.V.</wd:Company>
+            <wd:Company_Hierarchy>NN Insurance Companies</wd:Company_Hierarchy>
+            <wd:Location_-_Full_Address_with_Country>Prinses Beatrixlaan 35&amp;#xa;2595 AK The Hague&amp;#xa;Netherlands</wd:Location_-_Full_Address_with_Country>
+            <wd:Country_Alpha_2_Code>NL</wd:Country_Alpha_2_Code>
+            <wd:Location_Address_City>The Hague</wd:Location_Address_City>
+            <wd:Location_Address_Postal_Code>2595 AK</wd:Location_Address_Postal_Code>
+            <wd:billingCode>V0640238</wd:billingCode>
+            <wd:Is_International_Assignment>0</wd:Is_International_Assignment>
+            <wd:CFINT_LookupByDate_-_Employee_is_Converted_CW_as_of_35_days_ahead_on_Position>0</wd:CFINT_LookupByDate_-_Employee_is_Converted_CW_as_of_35_days_ahead_on_Position>
+            <wd:Home_Company wd:Descriptor="NN Personeel B.V.">
+                <wd:ID wd:type="WID">0f5531cfcac310f0e6cd4dd0f2a0ee1d</wd:ID>
+                <wd:ID wd:type="Organization_Reference_ID">CMPNL002</wd:ID>
+                <wd:ID wd:type="Company_Reference_ID">CMPNL002</wd:ID>
+            </wd:Home_Company>
+            <wd:This_Position_Company wd:Descriptor="NN Personeel B.V.">
+                <wd:ID wd:type="WID">0f5531cfcac310f0e6cd4dd0f2a0ee1d</wd:ID>
+                <wd:ID wd:type="Organization_Reference_ID">CMPNL002</wd:ID>
+                <wd:ID wd:type="Company_Reference_ID">CMPNL002</wd:ID>
+            </wd:This_Position_Company>
+            <wd:Position_Country wd:Descriptor="Netherlands">
+                <wd:ID wd:type="WID">9696868b09c64d52a62ee13b052383cc</wd:ID>
+                <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">NL</wd:ID>
+                <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">NLD</wd:ID>
+                <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">528</wd:ID>
+            </wd:Position_Country>
+            <wd:Home_Country wd:Descriptor="Netherlands">
+                <wd:ID wd:type="WID">9696868b09c64d52a62ee13b052383cc</wd:ID>
+                <wd:ID wd:type="ISO_3166-1_Alpha-2_Code">NL</wd:ID>
+                <wd:ID wd:type="ISO_3166-1_Alpha-3_Code">NLD</wd:ID>
+                <wd:ID wd:type="ISO_3166-1_Numeric-3_Code">528</wd:ID>
+            </wd:Home_Country>
+            <wd:New_Tenant_Code>NN</wd:New_Tenant_Code>
+            <wd:CFINT_LRV_Worker_ID_on_Position_and_Job>2649112</wd:CFINT_LRV_Worker_ID_on_Position_and_Job>
+            <wd:CFINT_T_F_-_Company_is_Delta_Lloyd_and_Worker_ID_in_Range_1_on_Position>0</wd:CFINT_T_F_-_Company_is_Delta_Lloyd_and_Worker_ID_in_Range_1_on_Position>
+            <wd:CFINT_T_F_-_Company_is_Delta_Lloyd_and_Worker_ID_in_Range_2_on_Position>0</wd:CFINT_T_F_-_Company_is_Delta_Lloyd_and_Worker_ID_in_Range_2_on_Position>
+            <wd:CFINT_T_F_-_Company_is_Delta_Lloyd_and_Worker_ID_in_Range_3_on_Position>0</wd:CFINT_T_F_-_Company_is_Delta_Lloyd_and_Worker_ID_in_Range_3_on_Position>
+        </wd:All_Positions_Jobs>
+        <wd:WD_Employee_ID_padded>02649112</wd:WD_Employee_ID_padded>
+        <wd:employeeID>2649112</wd:employeeID>
+        <wd:CFINT_Eval_Previous_Source_CDS_Employee_ID_on__Worker>02649112</wd:CFINT_Eval_Previous_Source_CDS_Employee_ID_on__Worker>
+        <wd:Cn>Amr (A.H.H.)  Elmahmoudy</wd:Cn>
+        <wd:Surname>Elmahmoudy</wd:Surname>
+        <wd:Given_First_Name>Amr</wd:Given_First_Name>
+        <wd:Preferred_First_Name>Amr</wd:Preferred_First_Name>
+        <wd:Initials>A.H.H.</wd:Initials>
+        <wd:Gender>Male</wd:Gender>
+        <wd:Primary_Home_Address>van Alkemadelaan 35$Den Haag$2597 AB$Netherlands</wd:Primary_Home_Address>
+        <wd:primaryWorkEmail>amr.elmahmoudy@nn-group.com</wd:primaryWorkEmail>
+        <wd:NormalizeSurname>Elmahmoudy</wd:NormalizeSurname>
+        <wd:Worker_Type>External</wd:Worker_Type>
+        <wd:Hire_Date>2020-03-03-08:00</wd:Hire_Date>
+        <wd:Original_Hire_Date>03-03-2020</wd:Original_Hire_Date>
+        <wd:Seniority_Date>2020-03-03-08:00</wd:Seniority_Date>
+        <wd:Preferred_Display_Language>nl_NL</wd:Preferred_Display_Language>
+        <wd:EMPL_STATUS>Active</wd:EMPL_STATUS>
+        <wd:roomNumber>NL A.000.000</wd:roomNumber>
+    </wd:Report_Entry>
+</wd:Report_Data>

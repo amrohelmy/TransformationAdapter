@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.slf4j.Logger;
@@ -15,10 +16,13 @@ public class ScheduledTasks {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     @Scheduled(fixedRate = 5000)
-    public void reportCurrentTime() {
+    public void reportCurrentTime() throws IOException {
         log.info("The time is now {}", dateFormat.format(new Date()));
-        Consumer consumer = new Consumer();
-        consumer.parseCourse();
+
+        // iterate over the flows
+        Iterator iterator = new Iterator();
+        iterator.iterateConfig();
+
     }
 
 }

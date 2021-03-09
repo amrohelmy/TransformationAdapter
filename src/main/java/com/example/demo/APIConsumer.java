@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -11,17 +12,16 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 @Service
-public class Consumer {
+public class APIConsumer {
 
-    private final Logger logger = LoggerFactory.getLogger(Consumer.class);
+    private final Logger logger = LoggerFactory.getLogger(APIConsumer.class);
 
-    public void parseCourse() {
+    public void callAPI(JsonNode config) {
 
         try {
             // fake end point that returns XML response
@@ -36,28 +36,19 @@ public class Consumer {
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
 
-            FileWriter writer = new FileWriter(new File("./src/main/temp/test.xml"));
+            FileWriter writer = new FileWriter(new File("./src/main/resources/XSLT/INT001.xml"));
             StreamResult result = new StreamResult(writer);
             transformer.transform(source, result);
 
-            // transform using xslt
-            Source xslt = new StreamSource(new File("./src/main/temp/transformer.xsl"));
-            Source xml  = new StreamSource(new File("./src/main/temp/test.xml"));
-            Result out  = new StreamResult(new File("./src/main/temp/result.html"));
-
-            Transformer xslTransformer = transformerFactory.newTransformer(xslt);
-            xslTransformer.transform(xml, out);
-
-
+        } catch (TransformerConfigurationException e) {
+            e.printStackTrace();
+        } catch (TransformerException e) {
+            e.printStackTrace();
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (TransformerConfigurationException e) {
-            e.printStackTrace();
-        } catch (TransformerException e) {
             e.printStackTrace();
         }
     }
