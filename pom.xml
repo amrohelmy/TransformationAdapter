@@ -54,8 +54,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-java-sdk</artifactId>
-			<version>1.11.163</version>
+			<artifactId>aws-java-sdk-s3</artifactId>
+			<version>1.11.970</version>
 		</dependency>
 
 	</dependencies>
