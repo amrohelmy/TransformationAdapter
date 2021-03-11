@@ -15,6 +15,7 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
 
 @Service
 public class APIConsumer {
@@ -24,21 +25,25 @@ public class APIConsumer {
     public void callAPI(JsonNode config) {
 
         try {
-            // fake end point that returns XML response
-            String URL = "http://www.mocky.io/v2/5c8bdd5c360000cd198f831e";
+            // API end point that returns XML response
+            String URL = config.get("apiUrl").asText();
 
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(URL);
+
+            logger.info("Data returned successfully from the API");
 
             // transform document to xml file
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
 
-            FileWriter writer = new FileWriter(new File("./src/main/resources/XSLT/INT001.xml"));
+            FileWriter writer = new FileWriter(new File(config.get("xmlFileName").asText()));
             StreamResult result = new StreamResult(writer);
             transformer.transform(source, result);
+
+            logger.info("Data returned from the API has been written to a temp xml file");
 
         } catch (TransformerConfigurationException e) {
             e.printStackTrace();
