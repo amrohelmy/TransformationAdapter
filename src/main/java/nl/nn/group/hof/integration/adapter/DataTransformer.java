@@ -1,4 +1,4 @@
-package com.example.demo;
+package nl.nn.group.hof.integration.adapter;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.slf4j.Logger;

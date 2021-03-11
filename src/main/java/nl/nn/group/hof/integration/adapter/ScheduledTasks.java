@@ -1,4 +1,4 @@
-package com.example.demo;
+package nl.nn.group.hof.integration.adapter;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

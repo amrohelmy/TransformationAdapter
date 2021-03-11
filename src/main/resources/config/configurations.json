@@ -5,22 +5,28 @@
       "flowName": "employee",
       "sourceApp": "workday",
       "targetApp": "as-cds",
-      "fileName": "INT001.xml",
-      "xsltFileName": "INT001.xsl",
+      "xmlFileName": "src/main/resources/XSLT/INT001.xml",
+      "xsltFileName": "src/main/resources/XSLT/INT001a.xsl",
+      "outputFileName": "src/main/temp/result.txt",
       "apiUrl": "https://xxx",
-      "destinationServer": "SRPAFAPP0008",
-      "destinationDirectory": "/data/idm/tbi/TBI-Workday/AEIM/input/$(LocalFileName)"
+      "targetFileName": "targetFileName.txt",
+      "targetS3BucketName": "mydo-frontend",
+      "targetServer": "SRPAFAPP0008",
+      "targetDirectory": "/data/idm/tbi/TBI-Workday/AEIM/input/$(LocalFileName)"
     },
     {
       "flowID": "002",
       "flowName": "employee",
       "sourceApp": "workday",
       "targetApp": "as-cds",
-      "fileName": "INT002.xml",
-      "xsltFileName": "INT002.xsl",
+      "xmlFileName": "src/main/resources/XSLT/INT001.xml",
+      "xsltFileName": "src/main/resources/XSLT/INT001a.xsl",
+      "outputFileName": "src/main/temp/result.txt",
       "apiUrl": "https://xxx",
-      "destinationServer": "SRPAFAPP0008",
-      "destinationDirectory": "/data/idm/tbi/TBI-Workday/AEIM/input/$(LocalFileName)"
+      "targetFileName": "targetFileName.txt",
+      "targetS3BucketName": "mydo-frontend",
+      "targetServer": "SRPAFAPP0008",
+      "targetDirectory": "/data/idm/tbi/TBI-Workday/AEIM/input/$(LocalFileName)"
     }
   ]
 }

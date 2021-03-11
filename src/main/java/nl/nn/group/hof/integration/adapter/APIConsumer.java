@@ -1,6 +1,14 @@
-package com.example.demo;
+package nl.nn.group.hof.integration.adapter;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.apache.http.HttpResponse;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -15,12 +23,28 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Date;
 
 @Service
 public class APIConsumer {
 
     private final Logger logger = LoggerFactory.getLogger(APIConsumer.class);
+
+
+    public void callAPI1() throws IOException {
+        CredentialsProvider provider = new BasicCredentialsProvider();
+        UsernamePasswordCredentials credentials
+                = new UsernamePasswordCredentials("user1", "user1Pass");
+        provider.setCredentials(AuthScope.ANY, credentials);
+
+        HttpClient client = HttpClientBuilder.create()
+                .setDefaultCredentialsProvider(provider)
+                .build();
+
+        HttpResponse response = client.execute(
+                new HttpGet("URL_SECURED_BY_BASIC_AUTHENTICATION"));
+        int statusCode = response.getStatusLine()
+                .getStatusCode();
+    }
 
     public void callAPI(JsonNode config) {
 
