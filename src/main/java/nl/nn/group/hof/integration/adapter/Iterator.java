@@ -1,5 +1,6 @@
 package nl.nn.group.hof.integration.adapter;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpResponse;
@@ -33,24 +34,33 @@ import java.util.logging.XMLFormatter;
 public class Iterator {
 
     private static final Logger logger = LoggerFactory.getLogger(Iterator.class);
-//    @Autowired
-//    private APIConsumer apiConsumer;
+    @Autowired
+    private APIConsumer apiConsumer;
     @Autowired
     private DataTransformer datatransformer;
 
-    public void iterateConfig() throws IOException, TransformerException {
+    public void iterateConfig() {
 
-        // read the configuration file that contains all the flows
-        ObjectMapper mapper = new ObjectMapper();
-        File from = new File("src/main/resources/config/configurations.json");
-        JsonNode masterJSON = mapper.readTree(from);
+        try {
+            // read the configuration file that contains all the flows
+            ObjectMapper mapper = new ObjectMapper();
+            File from = new File("src/main/resources/config/configurations.json");
+            JsonNode masterJSON = mapper.readTree(from);
 
-        // for each flow run the process of calling the api, transforming the file and finally uploading to S3
-        for (int i=0 ; i<masterJSON.get("config").size(); i++)
-            {
-                logger.info("Executing flow number "+ (i+1) +" has started");
-//              apiConsumer.callAPI(masterJSON.get("config").get(i));
-                datatransformer.xsltTransformer(masterJSON.get("config").get(i));
-            }
+            // for each flow run the process of calling the api, transforming the file and finally uploading to S3
+            for (int i=0 ; i<masterJSON.get("config").size(); i++)
+                {
+                    logger.info("Executing flow number "+ (i+1) +" has started");
+    //              apiConsumer.callAPI(masterJSON.get("config").get(i));
+                    datatransformer.xsltTransformer(masterJSON.get("config").get(i));
+                }
+
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (TransformerException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
